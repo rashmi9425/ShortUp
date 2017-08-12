@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.shortup.R;
 import com.shortup.models.pojos.ResponsePojo;
+import com.shortup.network.HttpGetClient;
 import com.shortup.services.UrlShortenService;
 
 /**
@@ -27,7 +29,7 @@ import com.shortup.services.UrlShortenService;
  * create an instance of this fragment.
  */
 public class AddUrlFragment extends Fragment implements UrlShortenService.UrlShortenServiceInterface,
-        View.OnClickListener{
+        View.OnClickListener {
 
     private OnFragmentInteractionListener mListener;
 
@@ -114,8 +116,21 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.bAddUrl){
-            if (shortenService != null  && bAddUrl.getText().toString() != null && bAddUrl.getText().toString().length() > 0){
-                shortenService.shorten(Uri.encode(bAddUrl.getText().toString()));
+            if (shortenService != null  && etUrl.getText().toString() != null && etUrl.getText().toString().length() > 0){
+                Log.v(">>>>>>>>>>>>>>>", Uri.encode(etUrl.getText().toString()));
+                shortenService.shorten("http%3A%2F%2Fgoogle.com%2F");
+
+//                Thread t = new Thread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        HttpGetClient client = new HttpGetClient();
+//                        client.setUrl("https://api-ssl.bitly.com/v3/shorten?access_token=512b33cc519eeb5a59829f12c823ada432f37503&longUrl=http%3A%2F%2Fgoogle.com%2F&format=json");
+//                        client.sendGetRequest();
+//                        Log.v("###################", client.getResponse());
+//                    }
+//                });
+//                t.start();
+
             }
         }
     }

@@ -2,7 +2,6 @@ package com.shortup.activities;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,9 +12,8 @@ import android.widget.FrameLayout;
 
 import com.shortup.R;
 import com.shortup.fragments.AddUrlFragment;
-import com.shortup.fragments.UrlListFragment;
 
-public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFragmentInteractionListener, UrlListFragment.OnFragmentInteractionListener{
+public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFragmentInteractionListener{
 
     private FrameLayout fl_hs_fragment_container;
 
@@ -70,16 +68,6 @@ public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFr
 
     @Override
     public void onAddUrlFragmentInteraction() {
-        Fragment mUrlListFragment = UrlListFragment.newInstance();
-        getSupportFragmentManager().beginTransaction()
-                .setCustomAnimations(R.anim.from_middle, R.anim.to_middle)
-                .replace(R.id.fl_hs_fragment_container, mUrlListFragment)
-                .addToBackStack(null)
-                .commit();
     }
 
-    @Override
-    public void onUrlListFragmentInteraction() {
-
-    }
 }

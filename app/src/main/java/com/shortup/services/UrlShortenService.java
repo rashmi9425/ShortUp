@@ -2,15 +2,19 @@ package com.shortup.services;
 
 import android.support.v4.app.Fragment;
 import android.content.Context;
+import android.util.Log;
 
 import com.shortup.models.pojos.ResponsePojo;
 import com.shortup.services.api_interfaces.GetterInterface;
 import com.shortup.utils.GlobalConstant;
 
-import retrofit2.Retrofit;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit.Retrofit;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.GsonConverterFactory;
 
 public class UrlShortenService {
 
@@ -24,25 +28,30 @@ public class UrlShortenService {
         this.context = context;
         this.urlShortenServiceInterface = (UrlShortenServiceInterface) fragment;
         this.responsePojo = new ResponsePojo();
+
+        this.retrofit = new Retrofit.Builder()
+                            .baseUrl(GlobalConstant.base_url)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
     }
 
-    private Callback<ResponsePojo> responsePojoCallback =
-            new Callback<ResponsePojo>() {
-                @Override
-                public void onResponse(Call<ResponsePojo> call, Response<ResponsePojo> response) {
-                    if (response.isSuccessful()){
-                        responsePojo = response.body();
-                        urlShortenServiceInterface.onUrlShortenServiceResponseReceived(responsePojo);
-                    }else {
-                        urlShortenServiceInterface.onUrlShortenServiceError("Invalid request !");
-                    }
-                }
+    private Callback<ResponsePojo> responsePojoCallback = new Callback<ResponsePojo>() {
+        @Override
+        public void onResponse(Response<ResponsePojo> response) {
+            if (response.isSuccess()){
+                responsePojo = response.body();
+                urlShortenServiceInterface.onUrlShortenServiceResponseReceived(responsePojo);
+            }else {
+                urlShortenServiceInterface.onUrlShortenServiceError("Invalid request !");
+            }
+        }
 
-                @Override
-                public void onFailure(Call<ResponsePojo> call, Throwable t) {
-                    urlShortenServiceInterface.onUrlShortenServiceError("Unable to reach server !");
-                }
-            };
+        @Override
+        public void onFailure(Throwable t) {
+            Log.v(">>>>>>>>>>>>>>>>>>>", t.toString());
+            urlShortenServiceInterface.onUrlShortenServiceError("Failure !");
+        }
+    };
 
     public void shorten(String longUrl){
         GetterInterface getterInterface = this.retrofit.create(GetterInterface.class);
