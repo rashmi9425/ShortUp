@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\exploded-aar\com.github.navasmdc\MaterialDesign\1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="12b228574de7977e56e41cbfb385b1463bbdb41a">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\classes-cce9b0fc7abecb7f5e1c59b797ab17d6e5cfc6ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-0cbf80d1c2651db679cfba513879ae8533886aa4.jar" />
+    </item>
+    <item
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\classes-47a263a4828cc24b8581f99d2db5d634f2eb16ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\gson-2.3-d2959b93e39d64752101c81dd3ba1e5c04a99592.jar" />
+    </item>
+    <item
+        jar="C:\Android\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-3e624abdc2016802271d94229e64ebba6d234477.jar" />
+    </item>
+    <item
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\library-2.4.0-4c9ed269cd9a03de40e36f0ae4d24e7fc65d7494.jar" />
+    </item>
+    <item
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\classes-7c1a96f76f8d675d0ae2dd6f81ca07d8666c5084.jar" />
+    </item>
+
+</items>
