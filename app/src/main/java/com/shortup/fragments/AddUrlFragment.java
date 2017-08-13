@@ -11,15 +11,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.inmobi.ads.InMobiNative;
 import com.shortup.R;
+import com.shortup.managers.ad_manager.AdManager;
 import com.shortup.models.pojos.ResponsePojo;
 import com.shortup.network.HttpGetClient;
 import com.shortup.services.UrlShortenService;
+import com.shortup.utils.GlobalConstant;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONObject;
 
 import static android.R.attr.type;
 
@@ -32,7 +40,7 @@ import static android.R.attr.type;
  * create an instance of this fragment.
  */
 public class AddUrlFragment extends Fragment implements UrlShortenService.UrlShortenServiceInterface,
-        View.OnClickListener {
+        View.OnClickListener, AdManager.AdManagerInterface {
 
     private OnFragmentInteractionListener mListener;
 
@@ -41,18 +49,13 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
     private EditText etUrl;
     private ProgressBar progressBar;
     private TextView tvShortUrl;
+    private TextView tvAdHeader;
+    private ImageView ivAdImage;
 
-    private Context context;
-
+    private Activity activity;
     private UrlShortenService shortenService;
+    private AdManager adManager;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @return A new instance of fragment AddUrlFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static AddUrlFragment newInstance() {
         AddUrlFragment fragment = new AddUrlFragment();
         return fragment;
@@ -70,7 +73,6 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_url, container, false);
     }
 
@@ -78,20 +80,24 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
     public void onViewCreated(View view, Bundle savedInstanceState) {
         etUrl = (EditText)view.findViewById(R.id.etUrl);
         bAddUrl = (Button)view.findViewById(R.id.bAddUrl);
-        buttonFloat = (Button)view.findViewById(R.id.buttonFloat);
         progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
         tvShortUrl = (TextView)view.findViewById(R.id.tvShortUrl);
+        tvAdHeader = (TextView)view.findViewById(R.id.tvAdHeader);
+        ivAdImage = (ImageView)view.findViewById(R.id.ivAdImage);
         progressBar.setVisibility(View.INVISIBLE);
-
         bAddUrl.setOnClickListener(this);
 
-        shortenService = new UrlShortenService(context, this);
+        shortenService = new UrlShortenService(this);
+        adManager = new AdManager();
+
+        if (this.activity != null)
+            adManager.init(this.activity, this);
     }
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        context = activity;
+        this.activity = activity;
         try {
             mListener = (OnFragmentInteractionListener) activity;
         } catch (ClassCastException e) {
@@ -107,53 +113,57 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
     }
 
     @Override
-    public void onUrlShortenServiceResponseReceived(ResponsePojo responsePojo) {
-        tvShortUrl.setText(responsePojo.getData().getUrl());
+    public void onUrlShortenServiceResponseReceived(JsonObject responseJson) {
+        progressBar.setVisibility(View.INVISIBLE);
+        adManager.fetchAd();
+        if (responseJson.get("status_code").getAsInt() == 200 && responseJson.get("status_txt").toString().equalsIgnoreCase("OK"))
+            tvShortUrl.setText(responseJson.get("data").getAsJsonObject().get("url").getAsString());
+        else
+            Toast.makeText(this.getActivity(), "Invalid URL !", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onUrlShortenServiceError(String message) {
+        progressBar.setVisibility(View.INVISIBLE);
         Toast.makeText(this.getActivity(), message, Toast.LENGTH_SHORT).show();
+        adManager.fetchAd();
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.bAddUrl){
+            ivAdImage.setVisibility(View.VISIBLE);
             if (shortenService != null  && etUrl.getText().toString() != null && etUrl.getText().toString().length() > 0){
-                Log.v(">>>>>>>>>>>>>>>", Uri.encode(etUrl.getText().toString()));
+                progressBar.setVisibility(View.VISIBLE);
                 shortenService.shorten(etUrl.getText().toString());
-                //https://api-ssl.bitly.com/v3/shorten?access_token=512b33cc519eeb5a59829f12c823ada432f37503&longUrl=http%3A%2F%2Fgoogle.com%2F&format=json
-            /*   Thread t = new Thread(new Runnable() {
-                   @Override
-                   public void run() {
-                       HttpGetClient client = new HttpGetClient();
-                        client.setUrl(etUrl.getText().toString());
-                        client.sendGetRequest();
-                       ResponsePojo output = new GsonBuilder().create().fromJson(client.getResponse(),ResponsePojo.class);
-                        //Log.v("###################", client.getResponseCode());
-                        Log.v("###################", output.getData().getUrl());
-                       if(client.getResponseCode()==200){
-                           tvShortUrl.setText(output.getData().getUrl());
-                       }
-                       else
-                           Toast.makeText(v.getContext(),"failure", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-                t.start();*/
-
             }
         }
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     */
+    @Override
+    public void onShowAd(JSONObject content) {
+        ivAdImage.setVisibility(View.VISIBLE);
+        try {
+            if (tvAdHeader != null && ivAdImage != null){
+                tvAdHeader.setText(content.get("title").toString() + " : " + content.get("description").toString());
+                Picasso.with(this.activity)
+                        .load(content.getJSONObject("screenshots").get("url").toString())
+                        .centerInside()
+                        .fit()
+                        .into(ivAdImage);
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onRemoveAd() {
+        ivAdImage.setVisibility(View.INVISIBLE);
+    }
+
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
         public void onAddUrlFragmentInteraction();
     }
 }

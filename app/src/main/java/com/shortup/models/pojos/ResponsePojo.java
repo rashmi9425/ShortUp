@@ -18,4 +18,11 @@ public class ResponsePojo {
     public void setData(DataPojo data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "ResponsePojo{" +
+                "data=" + data +
+                '}';
+    }
 }

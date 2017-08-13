@@ -28,4 +28,12 @@ public class DataPojo {
     public void setLongUrl(String longUrl) {
         this.longUrl = longUrl;
     }
+
+    @Override
+    public String toString() {
+        return "DataPojo{" +
+                "url='" + url + '\'' +
+                ", longUrl='" + longUrl + '\'' +
+                '}';
+    }
 }
