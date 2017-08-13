@@ -13,7 +13,7 @@ import retrofit.http.Query;
 public interface GetterInterface {
 
     @GET("v3/shorten")
-    Call<ResponsePojo> getShortUrl(
+    Call<String> getShortUrl(
                         @Query("access_token")      String accessToken,
                         @Query("longUrl")           String longUrl,
                         @Query("format")            String format);

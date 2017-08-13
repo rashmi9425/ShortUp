@@ -15,10 +15,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.GsonBuilder;
 import com.shortup.R;
 import com.shortup.models.pojos.ResponsePojo;
 import com.shortup.network.HttpGetClient;
 import com.shortup.services.UrlShortenService;
+
+import static android.R.attr.type;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -118,18 +121,26 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
         if (v.getId() == R.id.bAddUrl){
             if (shortenService != null  && etUrl.getText().toString() != null && etUrl.getText().toString().length() > 0){
                 Log.v(">>>>>>>>>>>>>>>", Uri.encode(etUrl.getText().toString()));
-                shortenService.shorten("http%3A%2F%2Fgoogle.com%2F");
+                shortenService.shorten(etUrl.getText().toString());
+                //https://api-ssl.bitly.com/v3/shorten?access_token=512b33cc519eeb5a59829f12c823ada432f37503&longUrl=http%3A%2F%2Fgoogle.com%2F&format=json
+            /*   Thread t = new Thread(new Runnable() {
+                   @Override
+                   public void run() {
+                       HttpGetClient client = new HttpGetClient();
+                        client.setUrl(etUrl.getText().toString());
+                        client.sendGetRequest();
+                       ResponsePojo output = new GsonBuilder().create().fromJson(client.getResponse(),ResponsePojo.class);
+                        //Log.v("###################", client.getResponseCode());
+                        Log.v("###################", output.getData().getUrl());
+                       if(client.getResponseCode()==200){
+                           tvShortUrl.setText(output.getData().getUrl());
+                       }
+                       else
+                           Toast.makeText(v.getContext(),"failure", Toast.LENGTH_SHORT).show();
 
-//                Thread t = new Thread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        HttpGetClient client = new HttpGetClient();
-//                        client.setUrl("https://api-ssl.bitly.com/v3/shorten?access_token=512b33cc519eeb5a59829f12c823ada432f37503&longUrl=http%3A%2F%2Fgoogle.com%2F&format=json");
-//                        client.sendGetRequest();
-//                        Log.v("###################", client.getResponse());
-//                    }
-//                });
-//                t.start();
+                    }
+                });
+                t.start();*/
 
             }
         }

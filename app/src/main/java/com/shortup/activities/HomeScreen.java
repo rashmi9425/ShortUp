@@ -4,22 +4,31 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.inmobi.ads.InMobiNative;
+import com.inmobi.sdk.InMobiSdk;
 import com.shortup.R;
+import com.shortup.controller.InMobiNativeAd;
 import com.shortup.fragments.AddUrlFragment;
+
+import okhttp3.OkHttpClient;
 
 public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFragmentInteractionListener{
 
     private FrameLayout fl_hs_fragment_container;
 
+    OkHttpClient client = new OkHttpClient();
+
     public static FragmentManager mSupportFragmentManager;
     public static Context mApplicationContext;
     public static Resources mResources;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,12 @@ public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFr
                 .replace(R.id.fl_hs_fragment_container, mAddUrlFragment)
                 .addToBackStack(null)
                 .commit();
+
+        InMobiSdk.init(HomeScreen.this, "2ab350952a3440528b7544a8a4b9ba15");
+        InMobiSdk.setLocationWithCityStateCountry("Bangalore","Karnataka","India");
+        long a=1504368316876L;
+        InMobiNativeAd.fetchAd(HomeScreen.this,a);
+       // InMobiNative nativeAd = new InMobiNative(HomeScreen.this,);
     }
 
     private void initialize() {
@@ -41,6 +56,7 @@ public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFr
         mApplicationContext = getApplicationContext();
         mResources = getResources();
         fl_hs_fragment_container = (FrameLayout)findViewById(R.id.fl_hs_fragment_container);
+       // fl_hs_fragment_container = (FrameLayout)findViewById(R.id.fl_hs_fragment_container);
 
     }
 

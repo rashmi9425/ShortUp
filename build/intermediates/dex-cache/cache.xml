@@ -2,46 +2,400 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta1\53b5be42d6cf719ac1431b9aa9a4d5ab78856148\retrofit-2.0.0-beta1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="53b5be42d6cf719ac1431b9aa9a4d5ab78856148">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta1-1874752bf889e934c6491befbe8e5686df56906a.jar" />
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\f1e3f645c893711c09ebe948021163963f04db2a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_08d52ce0aa6f9ed15ffbe5a360e9ac13eaab1247\classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\08e8471b3a1aca4301011b39154cd44bd6b7a754\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_33fd37ceaed5576aaa7017b2e8f2119c1567f175\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\f04147eaaaf7d24e77033bf5160075ef36121d08\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f926866217a981d4329559ba70963ef3e3fd711f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="828cad06e620e58db4c4b662c79b8e71357d1f11">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_2a076c5ac74df206f1475c68ffd8c8e12a97636f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\gson-2.3.1-f4a073b40a777e84bd347417bedbf0a1616f2ed5.jar" />
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3.1_f4a073b40a777e84bd347417bedbf0a1616f2ed5\classes.dex" />
     </item>
     <item
-        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\okio-1.6.0-5a00877e40bcf4e370efe69646bd2d7acc461b13.jar" />
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\4cbb4b33d15ef1490ffb9b0c69bcf08b38b33563\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d6c077e65eaa13f91b678dab9e192873cd221d7a\classes.dex" />
     </item>
     <item
-        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\okhttp-2.5.0-b817b424475f0b4c789f0c108127e6b0b8cdb96e.jar" />
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\a3d49d319d8d2e3d4f8ded46837c8d08aa1dacad\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_66c08bd44cfd04119fb6db501d3a35522a41cdf0\classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\259c5daf1e52f80c7ef6ada4448cc61ffd0fbcdf\output\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_073943448fe1376c81d8c4d589b67cc147edfe20\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\f6edcba8760281eae539215a5d88004704414369\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3b372cf74cf1dd6451575edb583be40d6f816e48\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-2.4.0_4c9ed269cd9a03de40e36f0ae4d24e7fc65d7494\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\b144e82bd3afff3171b99e2ec3ec21eb01277664\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9edffba997ffbe61bbe2d3b58d3efebb4edfcdcb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.inmobi.monetization\inmobi-ads\6.1.0\d79247c2226e24e697b0024c841d0be5273bdad8\inmobi-ads-6.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d79247c2226e24e697b0024c841d0be5273bdad8">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\inmobi-ads-6.1.0_3693e9cb2d3615cc51c6531a6ca99d9f5b9c82cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\74bbef54b1e459b2f9dd53eb0fccddcf60f5bb6a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5f740599e4226f4bfae75f3f3232d1bffa2feda9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\3c0af8554dda80b0eb164fa5fcabcb4cfacc912a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5c21d1323270aae938c6ac82bc50501f7059edbc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_3e624abdc2016802271d94229e64ebba6d234477\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\5c5daea5210e3c0f6d2a3c8ac47b45cbf9ae48ac\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5db4a0151b144cc95a6ff7f1dbf6053399c7b71b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\75c95056b97898f3f092969be9a6b1ae17e13dd1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="619d7e462900401f89e8b664cb3a81a6257910e1">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_39b8c8c6bb16f0c5bfcf5ae112c8216a33034f5d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\9e69d279e20f536a595c379e1886ebb8837e1eca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_83dd72d588a37d2ba8c82fed00dc92aac3b49391\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.0-RC1\be7e96331952019f16dc52dce09ab25df29353d7\okhttp-3.0.0-RC1.jar"
-        jumboMode="false"
-        revision="23.0.1"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="be7e96331952019f16dc52dce09ab25df29353d7">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\okhttp-3.0.0-RC1-dcc615326e897c6e797b104439ecf98c44751c3b.jar" />
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.0.0-RC1_dcc615326e897c6e797b104439ecf98c44751c3b\classes.dex" />
     </item>
     <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\96ce7cecfe6a49b90d8c59b05efe87e18cb87644\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0806d37013a87d464a6e6518b0b6ef68ce5db84d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\259c5daf1e52f80c7ef6ada4448cc61ffd0fbcdf\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1f1103eba80f2a9f2c608b66bfc57e706a86b8e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\4f3dc3a519645b85b4410942fd7d94fbd2ee07ca\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_360f129524d425b3b9e787e8551db2c9a70d6a35\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-2.5.0_b817b424475f0b4c789f0c108127e6b0b8cdb96e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\19c1c2c7578467c3eceeade675086254e6be795c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dc23852399b5c67183e0c406e34816cff73c028c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\logging-interceptor\3.0.0-RC1\83fed2e3554b8bacf8209bc22b62d76d4f674533\logging-interceptor-3.0.0-RC1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="83fed2e3554b8bacf8209bc22b62d76d4f674533">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\logging-interceptor-3.0.0-RC1_354ab0e815d9eeb46e2a98286212f5b67579db63\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\2ebf477924f748fc0926beb625418ffe9b0b1205\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4323cecde9f0ac05f56ec1fa4925bdb08753ac71\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_7aa0216dc86c7ff2e65b753fbbf4775b1755d806\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\4cfd246622b3e5a002d2ece540241067c2a29253\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d61d7a97324bb0c7359ad5563a2583e3c862ce79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\37ad49460a424ba578043dc04c4381ed4a85a1df\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f61577f79d95a8f77ac8111cfd9cd577c442ea0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\a75a8fe271b968975f24a03e64b0e46d204952b6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c299b9639bbbb7c9ee1b79564dcf5e5e318a7baf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\9c94913e3c9310976bab408f39592f6f75fb4f78\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ecf4d10b602d5c3d80703aa8e2adeaabdc85f0d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\114e8ba116a0f94ec6e886ae909cc82fb61d10fe\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_750b9a1b29ae6740a281dc3bcb76ba09fb97c44a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\faf82b74fde31e03befbed4756d2dfaeb1039400\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_06978df0f2ec2ae3ff32b4810c835b21bfc30429\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta1\53b5be42d6cf719ac1431b9aa9a4d5ab78856148\retrofit-2.0.0-beta1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53b5be42d6cf719ac1431b9aa9a4d5ab78856148">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.0.0-beta1_1874752bf889e934c6491befbe8e5686df56906a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\converter-gson\2.0.0-beta1\3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a\converter-gson-2.0.0-beta1.jar"
-        jumboMode="false"
-        revision="23.0.1"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a">
-        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta1-db2c32eef7778de650127503802f05c69248e582.jar" />
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.0.0-beta1_db2c32eef7778de650127503802f05c69248e582\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\96ce7cecfe6a49b90d8c59b05efe87e18cb87644\output\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_6dcbe222b58d940208f62700ad5839d45e66cc76\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_aed93980adc09f72d42b9ed1bbe3403b211d85e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\a06497b4e89164ac33a60f4ced3a184e2a66b7ed\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_81cbcebb375f5ff860c8a5fcecae81e2f1a7fa37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_5a00877e40bcf4e370efe69646bd2d7acc461b13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\c24f6ed87a9bfb8b9e5cb547b9dafe4b6536909e\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a15d322701c2044dade791fc262de5635eb390af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\27122a4e262621fe4eb2c54ecd2c810f39eeff97\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e50dc08a3bb14f6686241554b2a0eaaf4dc3cc23\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\88968b018f66f43b6c5e9caa80ebffd979bc3a38\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_18ffc6c9ec68706d10bb51a12683f827f6957597\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\97da5ccc9ed99d83bfce3e5c38101eb622aed7f8\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_735788eaa91c48035a01d0788650dd3b892dc28d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\rashverm.ORADEV\.android\build-cache\a328ba601574d660101de289e8e0a97a6663e24d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8218aaaf5e54b49ccfdddb3a9b5cab51f06dfc42">
+        <dex dex="C:\Users\rashverm.ORADEV\AndroidStudioProjects\ShortUp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_faa8b5f530ff15a0dff22f98e71cf5b689b68d5a\classes.dex" />
     </item>
 
 </items>
