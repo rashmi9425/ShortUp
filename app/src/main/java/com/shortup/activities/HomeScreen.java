@@ -3,14 +3,13 @@ package com.shortup.activities;
 import android.content.Context;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.ListFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.inmobi.sdk.InMobiSdk;
 import com.shortup.R;
 import com.shortup.fragments.AddUrlFragment;
+import com.shortup.utils.GlobalConstant;
 
 public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFragmentInteractionListener{
 
@@ -22,7 +21,7 @@ public class HomeScreen extends AppCompatActivity implements AddUrlFragment.OnFr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        InMobiSdk.init(HomeScreen.this, "2ab350952a3440528b7544a8a4b9ba15");
+        InMobiSdk.init(HomeScreen.this, GlobalConstant.inMobiAccoutId);
     }
 
     @Override

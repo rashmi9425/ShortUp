@@ -1,13 +1,10 @@
 <resources>
     <string name="app_name">ShortUp</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_home_screen">HomeScreen</string>
     <string name="btn_text">Click!</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="list_url">List of URLs in cache</string>
     <string name="token_bitly">512b33cc519eeb5a59829f12c823ada432f37503</string>
-    <string name="PlacementId">ShortUp</string>
     <string name="app_desc">Enter a valid url to generated a shortened form of the url</string>
+    <string name="error">Invalid URL !</string>
+    <string name="success">Success</string>
+    <string name="emptyUrl">Please Enter a Url</string>
 </resources>

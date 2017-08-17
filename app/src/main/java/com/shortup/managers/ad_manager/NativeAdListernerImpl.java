@@ -1,16 +1,10 @@
 package com.shortup.managers.ad_manager;
 
-import android.util.Log;
-
-import com.google.gson.JsonObject;
 import com.inmobi.ads.InMobiAdRequestStatus;
 import com.inmobi.ads.InMobiNative;
 
 import org.json.JSONObject;
 
-/**
- * Created by rashverm on 8/13/2017.
- */
 
 public class NativeAdListernerImpl implements InMobiNative.NativeAdListener {
 
@@ -23,6 +17,7 @@ public class NativeAdListernerImpl implements InMobiNative.NativeAdListener {
     @Override
     public void onAdLoadSucceeded(InMobiNative inMobiNative) {
         try {
+            // Getting content on successful load
             JSONObject content = new JSONObject((String) inMobiNative.getAdContent());
             adManagerInterface.onShowAd(content);
         }catch (Exception e){

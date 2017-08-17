@@ -1,18 +1,11 @@
 package com.shortup.services;
 
 import android.support.v4.app.Fragment;
-import android.content.Context;
-import android.util.Log;
 
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.shortup.models.pojos.ResponsePojo;
 import com.shortup.services.api_interfaces.GetterInterface;
 import com.shortup.utils.GlobalConstant;
-import com.squareup.okhttp.ResponseBody;
 
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit.Retrofit;
 import retrofit.Call;
 import retrofit.Callback;

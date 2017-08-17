@@ -2,8 +2,6 @@ package com.shortup.managers.ad_manager;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-
 import com.inmobi.ads.InMobiNative;
 import com.inmobi.sdk.InMobiSdk;
 import com.shortup.utils.GlobalConstant;

@@ -1,11 +1,9 @@
 package com.shortup.fragments;
 
 import android.app.Activity;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.media.session.MediaControllerCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,20 +14,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.inmobi.ads.InMobiNative;
 import com.shortup.R;
 import com.shortup.managers.ad_manager.AdManager;
-import com.shortup.models.pojos.ResponsePojo;
-import com.shortup.network.HttpGetClient;
 import com.shortup.services.UrlShortenService;
-import com.shortup.utils.GlobalConstant;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
 import static android.R.attr.type;
+import static android.R.attr.visibility;
+import static android.R.attr.visible;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,10 +57,6 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
         return fragment;
     }
 
-    public AddUrlFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,12 +70,12 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        etUrl = (EditText)view.findViewById(R.id.etUrl);
-        bAddUrl = (Button)view.findViewById(R.id.bAddUrl);
-        progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
-        tvShortUrl = (TextView)view.findViewById(R.id.tvShortUrl);
-        tvAdHeader = (TextView)view.findViewById(R.id.tvAdHeader);
-        ivAdImage = (ImageView)view.findViewById(R.id.ivAdImage);
+        etUrl = (EditText) view.findViewById(R.id.etUrl);
+        bAddUrl = (Button) view.findViewById(R.id.bAddUrl);
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBar);
+        tvShortUrl = (TextView) view.findViewById(R.id.tvShortUrl);
+        tvAdHeader = (TextView) view.findViewById(R.id.tvAdHeader);
+        ivAdImage = (ImageView) view.findViewById(R.id.ivAdImage);
         progressBar.setVisibility(View.INVISIBLE);
         bAddUrl.setOnClickListener(this);
 
@@ -112,49 +104,66 @@ public class AddUrlFragment extends Fragment implements UrlShortenService.UrlSho
         mListener = null;
     }
 
+    //On SuccessFul Response invisible progressbar and set output
     @Override
     public void onUrlShortenServiceResponseReceived(JsonObject responseJson) {
         progressBar.setVisibility(View.INVISIBLE);
-        adManager.fetchAd();
-        if (responseJson.get("status_code").getAsInt() == 200 && responseJson.get("status_txt").toString().equalsIgnoreCase("OK"))
+        if (responseJson.get("status_code").getAsInt() == 200) {
+            Toast.makeText(this.getActivity(), R.string.success, Toast.LENGTH_SHORT).show();
             tvShortUrl.setText(responseJson.get("data").getAsJsonObject().get("url").getAsString());
-        else
-            Toast.makeText(this.getActivity(), "Invalid URL !", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(this.getActivity(), R.string.error, Toast.LENGTH_SHORT).show();
+       // adManager.fetchAd();
     }
 
     @Override
     public void onUrlShortenServiceError(String message) {
         progressBar.setVisibility(View.INVISIBLE);
         Toast.makeText(this.getActivity(), message, Toast.LENGTH_SHORT).show();
-        adManager.fetchAd();
+        //adManager.fetchAd();
     }
 
+    //Calling shorten Service
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.bAddUrl){
+        if (v.getId() == R.id.bAddUrl) {
             ivAdImage.setVisibility(View.VISIBLE);
-            if (shortenService != null  && etUrl.getText().toString() != null && etUrl.getText().toString().length() > 0){
+            if (shortenService != null && etUrl.getText().toString() != null && etUrl.getText().toString().length() > 0) {
                 progressBar.setVisibility(View.VISIBLE);
                 shortenService.shorten(etUrl.getText().toString());
-            }
+            } else
+                Toast.makeText(this.getActivity(), R.string.emptyUrl, Toast.LENGTH_SHORT).show();
         }
     }
 
+    //Displaying Ads
     @Override
     public void onShowAd(JSONObject content) {
         ivAdImage.setVisibility(View.VISIBLE);
         try {
-            if (tvAdHeader != null && ivAdImage != null){
+            if (tvAdHeader != null && ivAdImage != null) {
                 tvAdHeader.setText(content.get("title").toString() + " : " + content.get("description").toString());
+
                 Picasso.with(this.activity)
                         .load(content.getJSONObject("screenshots").get("url").toString())
                         .centerInside()
                         .fit()
-                        .into(ivAdImage);
+                        .into(ivAdImage, new Callback() {
+                            @Override
+                            public void onSuccess() {
+                                ivAdImage.setVisibility(View.VISIBLE);
+                            }
+
+                            @Override
+                            public void onError() {
+                                ivAdImage.setVisibility(View.INVISIBLE);
+                            }
+                        });
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+
         }
     }
 
